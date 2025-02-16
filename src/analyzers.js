@@ -39,7 +39,7 @@ export function analyzeBeatTracking(analyser) {
     analyser.getByteFrequencyData(buffer);
     const avg = buffer.reduce((sum, val) => sum + val, 0) / buffer.length;
     console.log("analyzeBeatTracking", avg);
-    return avg > 100;
+    return avg > 120;
   };
 }
 
