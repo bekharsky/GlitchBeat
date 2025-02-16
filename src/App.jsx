@@ -121,7 +121,7 @@ export default function AudioGlitchApp() {
           </button>
         ))}
       </div>
-      {audioElement && (
+      {audioElement ? (
         <div className="absolute bottom-4 right-4 space-x-2 flex">
           <button onClick={() => audioElement.play()} className="p-2 bg-green-700 rounded-lg hover:bg-green-600">
             <FaPlay />
@@ -134,7 +134,7 @@ export default function AudioGlitchApp() {
             <input type="file" accept="audio/mpeg" onChange={handleFileUpload} className="hidden" />
           </label>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }
