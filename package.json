@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "music-metadata": "10.9.0",

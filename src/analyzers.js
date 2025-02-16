@@ -10,7 +10,7 @@ export function analyzeSpectralFlux(analyser) {
       flux += diff > 0 ? diff : 0;
     }
     previousFrame.set(currentFrame);
-    console.log("analyzeSpectralFlux", flux);
+    // console.log("analyzeSpectralFlux", flux);
     return flux > 3000;
   };
 }
@@ -28,7 +28,7 @@ export function analyzeZeroCrossingRate(analyser) {
         crossings++;
       }
     }
-    console.log("analyzeZeroCrossingRate", crossings);
+    // console.log("analyzeZeroCrossingRate", crossings);
     return crossings > 120;
   };
 }
@@ -38,7 +38,7 @@ export function analyzeBeatTracking(analyser) {
   return () => {
     analyser.getByteFrequencyData(buffer);
     const avg = buffer.reduce((sum, val) => sum + val, 0) / buffer.length;
-    console.log("analyzeBeatTracking", avg);
+    // console.log("analyzeBeatTracking", avg);
     return avg > 120;
   };
 }
